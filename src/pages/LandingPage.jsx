@@ -1436,10 +1436,6 @@ export default function LandingPage() {
                 Got questions?
               </h2>
 
-              <p className="mt-3 text-[15.5px] leading-relaxed text-[#525866]">
-                Quick answers on matches, Naira (₦) payouts, and fair play.
-              </p>
-
               <a
                 href="mailto:support@pelebet.ng"
                 className="inline-flex items-center gap-1.5 mt-5 text-[14px] font-semibold text-[#2d7ff9] hover:text-[#1d6ae5] transition-colors"
@@ -1619,7 +1615,7 @@ export default function LandingPage() {
               {/* Col 1: Short Statement */}
               <div className="lg:col-span-4">
                 <p className="font-poppins font-medium text-[18px] sm:text-[20px] leading-[1.35] text-[#0d0d0d] max-w-[260px]">
-                  PeleBet is Nigeria&apos;s skill-based P2P gaming arena.
+                  Play games. Challenge friends. Win real cash.
                 </p>
               </div>
 
@@ -1735,7 +1731,7 @@ export default function LandingPage() {
             </div>
             <div className="flex items-center gap-4">
               <span>Lagos, Nigeria</span>
-              <span>NGN (₦) Instant Payouts</span>
+              <span>·</span>
               <span className="font-medium text-[#0d0d0d]">18+</span>
             </div>
           </div>
