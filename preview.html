@@ -371,9 +371,11 @@
 </head>
 <body class="bg-white text-[#0d0d0d] antialiased selection:bg-blue-600 selection:text-white">
   <div class="min-h-screen bg-white text-[#0d0d0d] font-inter">
-      
+      <!-- ===================================================================
+          HERO SECTION (White Minimalist Stage + Right-Bleed Hero Artwork)
+      =================================================================== -->
       <section class="hero-section-observer is-visible relative bg-white overflow-x-clip lg:min-h-[790px] xl:min-h-[830px] flex flex-col justify-between">
-        
+        <!-- RIGHT-BLEED HERO IMAGE -->
         <div class="hidden lg:block pointer-events-none select-none absolute top-4 right-0 -bottom-8 xl:-bottom-10 z-10 anim-open-hero-art">
           <img
             src="/public/images/hero-section-image.png?v=3"
@@ -383,9 +385,9 @@
         </div>
 
         <div class="max-w-[1440px] w-full mx-auto px-4 sm:px-8 lg:px-12 pt-5 sm:pt-6 flex-1 flex flex-col justify-between relative z-20">
-          
+          <!-- CLEAN HIGH-CONTRAST PILL NAVBAR -->
           <header class="w-full flex items-center justify-between gap-4 relative z-30 anim-open-nav">
-            
+            <!-- Left Group: PeleBet Dark Logo + Floating Pill Navigation -->
             <div class="flex items-center gap-5 lg:gap-8">
               <a
                 href="/"
@@ -426,30 +428,30 @@
               </nav>
             </div>
 
-            
+            <!-- Right: QR Code "Download the App" Badge + Mobile Menu Button -->
             <div class="flex items-center gap-2 sm:gap-3">
               <a
                 href="#download-ios"
                 class="group inline-flex items-center gap-2 sm:gap-3.5 bg-[#082066] hover:bg-[#06174d] text-white rounded-[14px] sm:rounded-[18px] px-2.5 py-2 sm:px-4 sm:py-2.5 sm:pr-6 shadow-[0_12px_30px_rgba(8,32,102,0.28)] border border-white/15 transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5"
               >
-                
+                <!-- Crisp White QR Code SVG with 3 Rounded Corner Finders & Matrix Dots -->
                 <svg
                   class="w-8 h-8 sm:w-12 sm:h-12 text-white shrink-0 group-hover:rotate-3 transition-transform duration-300"
                 viewBox="0 0 44 44"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                
+                <!-- Top-Left Finder -->
                 <rect x="2" y="2" width="12" height="12" rx="3.2" stroke="currentColor" stroke-width="2.4" />
                 <rect x="5.6" y="5.6" width="4.8" height="4.8" rx="1.2" fill="currentColor" />
-                
+                <!-- Top-Right Finder -->
                 <rect x="30" y="2" width="12" height="12" rx="3.2" stroke="currentColor" stroke-width="2.4" />
                 <rect x="33.6" y="5.6" width="4.8" height="4.8" rx="1.2" fill="currentColor" />
-                
+                <!-- Bottom-Left Finder -->
                 <rect x="2" y="30" width="12" height="12" rx="3.2" stroke="currentColor" stroke-width="2.4" />
                 <rect x="5.6" y="33.6" width="4.8" height="4.8" rx="1.2" fill="currentColor" />
 
-                
+                <!-- QR Matrix Dots -->
                 <g fill="currentColor">
                   <circle cx="18" cy="4" r="1.3" />
                   <circle cx="21" cy="4" r="1.3" />
@@ -527,14 +529,14 @@
                 </g>
               </svg>
 
-                
+                <!-- Stacked "Download the App" Copy -->
                 <div class="font-mona font-medium text-[12px] sm:text-[15px] leading-[1.15] tracking-[-0.01em] text-white text-left">
                   <span class="block">Download</span>
                   <span class="block">the App</span>
                 </div>
               </a>
 
-              
+              <!-- Mobile Hamburger Button -->
               <button
                 id="mobile-menu-btn"
                 type="button"
@@ -549,7 +551,7 @@
             </div>
           </header>
 
-          
+          <!-- Mobile Navigation Drawer -->
           <div
             id="mobile-nav-drawer"
             class="hidden md:hidden mt-3 rounded-2xl bg-white/95 backdrop-blur-md border border-gray-200/90 shadow-[0_18px_40px_rgba(15,23,42,0.12)] p-3 relative z-30"
@@ -582,11 +584,11 @@
             </nav>
           </div>
 
-          
+          <!-- HERO 2-COLUMN MAIN STAGE -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-7 sm:pt-10 lg:pt-12 flex-1">
-            
+            <!-- LEFT COLUMN: Typography, Left-Border Copy, Store Pills, Stepped Card -->
             <div class="lg:col-span-6 pb-8 sm:pb-12 lg:pb-14 lg:pl-2 relative z-20">
-              
+              <!-- Two-Tone Mona Sans Headline -->
               <h1 class="font-mona tracking-[-0.035em] leading-[1.08]">
                 <span class="block text-[38px] sm:text-[56px] lg:text-[64px] font-light text-[#6e6e77] anim-open-line-1">
                   Play Games.
@@ -596,16 +598,16 @@
                 </span>
               </h1>
 
-              
+              <!-- Subtitle with Vertical Left Line -->
               <div class="mt-6 border-l-[2px] border-[#3f3f46] pl-5 py-0.5 max-w-[440px] anim-open-sub">
                 <p class="font-inter text-[#6b7280] text-[15px] sm:text-[16px] leading-[1.65] font-normal">
                   Step into Africa’s biggest mobile gaming arena where every card, shot, and throw could earn you real money.
                 </p>
               </div>
 
-              
-              <div class="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-5 mb-2 relative z-10 anim-open-hero-art">
-                <div class="w-[96%] max-w-[430px] sm:max-w-[500px] rotate-[10deg] origin-bottom-right translate-x-3 sm:translate-x-5">
+              <!-- MOBILE / TABLET HERO IMAGE (Under subtitle, flush right & tilted into frame side) -->
+              <div class="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-6 mb-4 relative z-10 anim-open-hero-art">
+                <div class="w-[96%] max-w-[420px] sm:max-w-[500px] rotate-[22deg] origin-bottom-right translate-x-7 sm:translate-x-10">
                   <img
                     src="/public/images/hero-section-image.png?v=3"
                     alt="PeleBet App Mockup with Hand, Soccer Ball, and 8-Ball"
@@ -614,9 +616,9 @@
                 </div>
               </div>
 
-              
+              <!-- Apple Store & Google Play Pill Buttons -->
               <div class="mt-6 lg:mt-8 flex flex-wrap items-center gap-4 anim-open-ctas">
-                
+                <!-- Apple Store Solid Black Pill -->
                 <a
                   href="#download-ios"
                   class="bg-[#111111] hover:bg-[#222222] text-white rounded-full px-7 py-3.5 inline-flex items-center gap-3.5 shadow-[0_10px_25px_rgba(0,0,0,0.14)] hover:shadow-[0_16px_32px_rgba(0,0,0,0.22)] hover:-translate-y-1 active:scale-95 transition-all duration-300"
@@ -634,7 +636,7 @@
                   </div>
                 </a>
 
-                
+                <!-- Google Play Soft Light Pill -->
                 <a
                   href="#download-android"
                   class="bg-[#f8f8f9] hover:bg-[#f0f0f3] border border-gray-200/80 text-[#111111] rounded-full px-7 py-3.5 inline-flex items-center gap-3.5 shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all duration-300"
@@ -656,11 +658,11 @@
                 </a>
               </div>
 
-              
+              <!-- Bottom-Left Stepped Card ("Bet on Your Skill / How it works") + "100K+ Downloads" -->
               <div class="mt-11 sm:mt-12 flex flex-wrap items-end gap-8 sm:gap-10 anim-open-stepped">
-                
+                <!-- Stepped Card Container -->
                 <div class="relative pt-1 pl-3 group/step">
-                  
+                  <!-- Upper Soft-Gray Card -->
                   <div class="bg-[#f6f6f7] rounded-[26px] pt-4 pl-5 pr-12 pb-12 w-[270px] sm:w-[295px] transition-transform duration-300 group-hover/step:-translate-y-1">
                     <div class="flex items-center gap-3.5">
                       <div class="w-11 h-11 rounded-[14px] bg-[#111111] text-white flex items-center justify-center shadow-sm shrink-0">
@@ -677,7 +679,7 @@
                     </div>
                   </div>
 
-                  
+                  <!-- Overlapping Lower-Left White Pill ("How it works ->") -->
                   <a
                     href="#how-it-works"
                     class="group bg-[#fcfcfd] hover:bg-white border border-gray-100 shadow-[0_8px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_14px_30px_rgba(0,0,0,0.08)] rounded-[18px] px-6 py-4 flex items-center justify-between w-[230px] -mt-8 -ml-3 relative z-10 transition-all duration-300"
@@ -698,7 +700,7 @@
                   </a>
                 </div>
 
-                
+                <!-- 100K+ Downloads Stat -->
                 <div class="pb-2">
                   <svg class="w-7 h-7 text-[#111111] mb-2 fill-current" viewBox="0 0 24 24">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.33c.67-.81 1.12-1.94 1-3.08-.96.04-2.13.64-2.82 1.45-.61.7-.11 1.86-.99 2.97 1.08.08 2.15-.53 2.81-1.34z" />
@@ -715,10 +717,12 @@
         </div>
       </section>
 
-      
+      <!-- ===================================================================
+          INFINITE SCROLLING GAMES MARQUEE BAR (Under Hero Section, Masks Hand Edge)
+      =================================================================== -->
       <div class="w-full bg-white text-[#0d0d0d] py-5 sm:py-6 overflow-hidden select-none border-y border-gray-200/80 relative z-20">
         <div class="pelebet-marquee-track flex items-center w-max">
-          
+          <!-- Track Half 1 -->
           <div class="flex items-center shrink-0">
             <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">LUDO</span>
             <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
@@ -748,7 +752,7 @@
             <span class="text-[#f6be56] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
           </div>
 
-          
+          <!-- Track Half 2 (Identical Duplicate for Seamless Loop) -->
           <div class="flex items-center shrink-0" aria-hidden="true">
             <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">LUDO</span>
             <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
@@ -780,10 +784,12 @@
         </div>
       </div>
 
-      
+      <!-- ===================================================================
+          GAME FEATURES SECTION (Full-Width Bento Collage with Small Side Margins)
+      =================================================================== -->
       <section id="features" class="py-16 sm:py-24 px-3 sm:px-5 lg:px-7 bg-white">
         <div class="w-full max-w-[1600px] mx-auto">
-          
+          <!-- Centered Minimal Section Header -->
           <div class="text-center max-w-[680px] mx-auto mb-12 sm:mb-16 reveal-item reveal-up">
             <span class="inline-block font-inter text-[11px] sm:text-[12px] font-medium tracking-[0.32em] uppercase text-[#525866] mb-3.5">
               WHY PELEBET
@@ -798,11 +804,13 @@
             </p>
           </div>
 
-          
+          <!-- Full-Bleed 2-Column Asymmetric Bento Collage with Tight Gaps -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4 lg:gap-5 items-stretch">
-            
+            <!-- ===============================================================
+                LEFT COLUMN (Sky-Blue Matchups Card + Purple Chat & Payout Card)
+            =============================================================== -->
             <div class="flex flex-col gap-3.5 sm:gap-4 lg:gap-5">
-              
+              <!-- CARD 1 (Top-Left): Sky-Blue Gradient — Instant PvP Matchups -->
               <div class="reveal-item reveal-left bento-card rounded-[28px] bg-gradient-to-b from-[#edf6ff] via-[#dcf0ff] to-[#bce0fd] p-6 sm:p-10 lg:p-12 flex flex-col justify-between min-h-[340px] sm:min-h-[410px] relative overflow-hidden">
                 <div class="reveal-child-text">
                   <h3 class="font-mona font-semibold text-[22px] sm:text-[28px] lg:text-[30px] tracking-[-0.02em] text-[#0d0d0d]">
@@ -813,9 +821,9 @@
                   </p>
                 </div>
 
-                
+                <!-- Two Staggered Floating White Lobby Pills (Swipeable / Interactive) -->
                 <div class="mt-7 sm:mt-8 flex flex-col gap-3.5 sm:gap-4 max-w-[560px] w-full mx-auto swipe-card-group">
-                  
+                  <!-- Upper Pill (Shifted Right) -->
                   <div class="swipe-pill-item stagger-1 bg-white rounded-full py-2.5 sm:py-3 pl-3 sm:pl-3.5 pr-3 sm:pr-4 shadow-[0_10px_28px_rgba(15,23,42,0.06)] hover:shadow-[0_16px_34px_rgba(45,127,249,0.16)] flex items-center justify-between gap-2.5 sm:gap-4 ml-2 sm:ml-14 cursor-grab active:cursor-grabbing transition-all duration-300 hover:-translate-y-1 hover:-translate-x-1.5">
                     <div class="flex items-center gap-2.5 sm:gap-3.5 min-w-0">
                       <img
@@ -837,7 +845,7 @@
                     </span>
                   </div>
 
-                  
+                  <!-- Lower Pill (Shifted Left) -->
                   <div class="swipe-pill-item stagger-2 bg-white rounded-full py-2.5 sm:py-3 pl-3 sm:pl-3.5 pr-3 sm:pr-4 shadow-[0_10px_28px_rgba(15,23,42,0.06)] hover:shadow-[0_16px_34px_rgba(45,127,249,0.16)] flex items-center justify-between gap-2.5 sm:gap-4 mr-2 sm:mr-14 cursor-grab active:cursor-grabbing transition-all duration-300 hover:-translate-y-1 hover:translate-x-1.5">
                     <div class="flex items-center gap-2.5 sm:gap-3.5 min-w-0">
                       <img
@@ -861,9 +869,9 @@
                 </div>
               </div>
 
-              
+              <!-- CARD 2 (Bottom-Left): Lavender/Purple Gradient — Play with Friends & Instant Cashouts -->
               <div class="reveal-item reveal-left bento-card rounded-[28px] bg-gradient-to-b from-[#f3ebff] via-[#e4d2ff] to-[#c7adff] p-8 sm:p-10 lg:p-12 flex flex-col justify-between min-h-[490px] sm:min-h-[540px] relative overflow-hidden flex-1">
-                
+                <!-- Concentric Purple Wave Circles in Background (Gentle Pulse Animation) -->
                 <div
                   aria-hidden="true"
                   class="pointer-events-none absolute -bottom-28 left-1/2 -translate-x-1/2 w-[560px] h-[560px] rounded-full bg-[#b996ff]/35 anim-ring-pulse"
@@ -882,9 +890,9 @@
                   </p>
                 </div>
 
-                
+                <!-- Chat Bubbles & Golden Payout Notification Pill (Sequential Pop-In) -->
                 <div class="relative z-10 mt-10 flex flex-col gap-5 max-w-[520px] w-full mx-auto">
-                  
+                  <!-- Bubble 1: Left Aligned -->
                   <div class="chat-bubble-anim stagger-1 flex items-start gap-3 transition-transform duration-300 hover:translate-x-1.5">
                     <img
                       src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
@@ -899,7 +907,7 @@
                     </div>
                   </div>
 
-                  
+                  <!-- Bubble 2: Right Aligned -->
                   <div class="chat-bubble-anim stagger-2 flex items-start justify-end gap-3 transition-transform duration-300 hover:-translate-x-1.5">
                     <div class="bg-white rounded-[20px] rounded-tr-[6px] px-5 py-3.5 shadow-[0_8px_22px_rgba(88,28,135,0.08)] max-w-[280px]">
                       <p class="font-inter text-[13.5px] text-[#18181b] leading-snug">
@@ -914,7 +922,7 @@
                     />
                   </div>
 
-                  
+                  <!-- Bubble 3: Golden Payout Pill -->
                   <div class="chat-bubble-anim stagger-3 flex items-center gap-3 pt-1 transition-transform duration-300 hover:scale-[1.03] origin-left">
                     <img
                       src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
@@ -935,9 +943,11 @@
               </div>
             </div>
 
-            
+            <!-- ===============================================================
+                RIGHT COLUMN (Full-Bleed Community Card + Peach Games Fan Card)
+            =============================================================== -->
             <div class="flex flex-col gap-3.5 sm:gap-4 lg:gap-5">
-              
+              <!-- CARD 3 (Top-Right): Full-Bleed Lifestyle Photo + Dark Bottom Overlay -->
               <div class="reveal-item reveal-right bento-card rounded-[28px] min-h-[490px] sm:min-h-[540px] relative overflow-hidden flex flex-col justify-end p-8 sm:p-10 lg:p-12 bg-[#0f172a] group flex-1">
                 <img
                   src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=85"
@@ -945,7 +955,7 @@
                   class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   onerror="this.src=\'/public/images/man-holding-iphone.png\'"
                 />
-                
+                <!-- Smooth Dark Gradient Overlay at Bottom -->
                 <div
                   aria-hidden="true"
                   class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
@@ -961,7 +971,7 @@
                 </div>
               </div>
 
-              
+              <!-- CARD 4 (Bottom-Right): Peach/Apricot Gradient — All 4 Iconic Games Fanned & Swipeable Showcase -->
               <div class="reveal-item reveal-right bento-card rounded-[28px] bg-gradient-to-b from-[#fff3e4] via-[#ffe4c4] to-[#ffcb96] pt-8 sm:pt-10 lg:pt-12 px-6 sm:px-8 lg:px-10 pb-8 sm:pb-10 flex flex-col justify-between min-h-[410px] sm:min-h-[440px] relative overflow-hidden">
                 <div class="relative z-20 px-2 reveal-child-text flex items-start justify-between gap-4">
                   <div>
@@ -974,9 +984,9 @@
                   </div>
                 </div>
 
-                
+                <!-- All 4 Iconic Games Fanned Cards — Interactive Swipe / Drag & Hover Fan -->
                 <div id="games-swipe-deck" class="relative z-10 mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-3.5 items-stretch select-none cursor-grab active:cursor-grabbing">
-                  
+                  <!-- Game 1: Whot! -->
                   <div class="game-fan-card stagger-1 bg-white rounded-[18px] p-2.5 shadow-[0_14px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_22px_44px_rgba(0,0,0,0.16)] sm:transform sm:-rotate-[4deg] sm:translate-y-1 hover:rotate-0 hover:-translate-y-2.5 hover:scale-[1.04] hover:z-30 transition-all duration-300 flex flex-col">
                     <img
                       src="/public/images/whot_icon.png"
@@ -994,7 +1004,7 @@
                     </div>
                   </div>
 
-                  
+                  <!-- Game 2: 8-Ball Pool -->
                   <div class="game-fan-card stagger-2 bg-white rounded-[18px] p-2.5 shadow-[0_18px_36px_rgba(0,0,0,0.12)] hover:shadow-[0_22px_44px_rgba(0,0,0,0.18)] relative z-10 sm:transform sm:-rotate-[1.5deg] sm:-translate-y-1 hover:rotate-0 hover:-translate-y-3 hover:scale-[1.04] hover:z-30 transition-all duration-300 flex flex-col">
                     <img
                       src="/public/images/8ball_icon.png"
@@ -1012,7 +1022,7 @@
                     </div>
                   </div>
 
-                  
+                  <!-- Game 3: Ludo Classic -->
                   <div class="game-fan-card stagger-3 bg-white rounded-[18px] p-2.5 shadow-[0_18px_36px_rgba(0,0,0,0.12)] hover:shadow-[0_22px_44px_rgba(0,0,0,0.18)] relative z-10 sm:transform sm:rotate-[1.5deg] sm:-translate-y-1 hover:rotate-0 hover:-translate-y-3 hover:scale-[1.04] hover:z-30 transition-all duration-300 flex flex-col">
                     <img
                       src="/public/images/Ludo_icon.png"
@@ -1030,7 +1040,7 @@
                     </div>
                   </div>
 
-                  
+                  <!-- Game 4: Penalty Shootout -->
                   <div class="game-fan-card stagger-4 bg-white rounded-[18px] p-2.5 shadow-[0_14px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_22px_44px_rgba(0,0,0,0.16)] sm:transform sm:rotate-[4deg] sm:translate-y-1 hover:rotate-0 hover:-translate-y-2.5 hover:scale-[1.04] hover:z-30 transition-all duration-300 flex flex-col">
                     <img
                       src="/public/images/penalty_icon.png"
@@ -1054,21 +1064,23 @@
         </div>
       </section>
 
-      
+      <!-- ===================================================================
+          HOW IT WORKS SECTION (#how-it-works) — Sticky Scroll-Driven Phone Stage
+      =================================================================== -->
       <section
         id="how-it-works"
-        class="relative bg-[#0d0d0d] text-white py-14 sm:py-16 lg:py-0 lg:h-[360vh] select-none overflow-hidden lg:overflow-visible"
+        class="relative bg-[#0d0d0d] text-white h-[280vh] lg:h-[360vh] select-none"
       >
-        
-        <div class="lg:sticky lg:top-0 lg:h-screen w-full lg:overflow-hidden flex flex-col justify-center">
-          
+        <!-- Sticky Full-Viewport Container -->
+        <div class="sticky top-0 h-[100svh] w-full overflow-hidden flex flex-col justify-center py-3 lg:py-0">
+          <!-- Confetti Canvas Overlay (Fires when reaching Step 04: Cash Out) -->
           <canvas
             id="cashout-confetti-canvas"
             aria-hidden="true"
             class="pointer-events-none absolute inset-0 w-full h-full z-30"
           ></canvas>
 
-          
+          <!-- Subtle Brand-Complementary Radial Glows -->
           <div
             aria-hidden="true"
             class="pointer-events-none absolute right-[12%] top-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full bg-[#2d7ff9]/12 blur-[150px]"
@@ -1078,18 +1090,20 @@
             class="pointer-events-none absolute left-[8%] bottom-[15%] w-[380px] h-[380px] rounded-full bg-[#f6be56]/8 blur-[140px]"
           ></div>
 
-          
+          <!-- Main 2-Column PeleBet Stage -->
           <div class="relative z-10 w-full max-w-[1360px] mx-auto px-4 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-12 items-center gap-4 sm:gap-6 lg:gap-12">
-            
+            <!-- ===============================================================
+                LEFT COLUMN: PeleBet Header + 4-Step Interactive Scroll Timeline
+            =============================================================== -->
             <div class="lg:col-span-6 flex flex-col">
               <h2 class="font-mona font-semibold text-[24px] sm:text-[36px] lg:text-[48px] leading-[1.08] tracking-[-0.03em] text-white mb-3.5 sm:mb-6 lg:mb-8">
                 Four steps from kick-off
                 <br class="hidden sm:block" /> to instant cashout.
               </h2>
 
-              
+              <!-- Vertical Progress Rail (Desktop) + 4 Interactive Step Cards (2x2 on Mobile) -->
               <div class="relative lg:pl-6">
-                
+                <!-- Background Rail -->
                 <div
                   aria-hidden="true"
                   class="hidden lg:block absolute left-0 top-2 bottom-2 w-[3px] rounded-full bg-white/10 overflow-hidden"
@@ -1102,7 +1116,7 @@
                 </div>
 
                 <div class="grid grid-cols-2 gap-2 sm:gap-2.5 lg:flex lg:flex-col lg:items-start lg:gap-3.5">
-                  
+                  <!-- Step 01: Fund Your Wallet -->
                   <button
                     type="button"
                     data-step="0"
@@ -1119,7 +1133,7 @@
                     </span>
                   </button>
 
-                  
+                  <!-- Step 02: Pick Your Game -->
                   <button
                     type="button"
                     data-step="1"
@@ -1138,7 +1152,7 @@
                     </span>
                   </button>
 
-                  
+                  <!-- Step 03: Create or Join a Lobby -->
                   <button
                     type="button"
                     data-step="2"
@@ -1157,7 +1171,7 @@
                     </span>
                   </button>
 
-                  
+                  <!-- Step 04: Win & Cash Out -->
                   <button
                     type="button"
                     data-step="3"
@@ -1176,11 +1190,13 @@
               </div>
             </div>
 
-            
-            <div class="lg:col-span-6 flex justify-center lg:justify-end mt-4 lg:mt-0">
-              <div class="w-[280px] sm:w-[310px] lg:w-[320px] h-[565px] sm:h-[625px] lg:h-[650px] rounded-[44px] lg:rounded-[46px] bg-[#1b1b22] p-[9px] shadow-[0_32px_90px_rgba(0,0,0,0.65)] ring-1 ring-white/20 relative">
+            <!-- ===============================================================
+                RIGHT COLUMN: iPhone Frame with 4 Real PeleBet App Screens (From Figma)
+            =============================================================== -->
+            <div class="lg:col-span-6 flex justify-center lg:justify-end mt-1 lg:mt-0">
+              <div class="w-[240px] h-[440px] sm:w-[290px] sm:h-[560px] lg:w-[320px] lg:h-[650px] rounded-[36px] sm:rounded-[42px] lg:rounded-[46px] bg-[#1b1b22] p-[7px] lg:p-[9px] shadow-[0_32px_90px_rgba(0,0,0,0.65)] ring-1 ring-white/20 relative">
                 <div class="w-full h-full rounded-[38px] bg-[#f3f3f7] text-[#0e1660] relative overflow-hidden font-mona">
-                  
+                  <!-- Dynamic Island + Status Bar (shared) -->
                   <div class="absolute top-0 inset-x-0 z-40 h-10 flex items-center justify-between px-6 text-[11px] font-semibold text-[#0d0d0d] pointer-events-none">
                     <span>9:41</span>
                     <span class="absolute left-1/2 -translate-x-1/2 top-2 w-[84px] h-[24px] rounded-full bg-black"></span>
@@ -1191,17 +1207,19 @@
                     </span>
                   </div>
 
-                  
+                  <!-- ===========================================================
+                      SCREEN 0: WALLET — Funding Options & Withdrawal (Figma)
+                  =========================================================== -->
                   <div class="how-phone-screen is-active absolute inset-0 pt-12 px-3.5 pb-3 flex flex-col" data-screen="0">
                     <p class="text-center font-semibold text-[13px] text-[#0d0d0d] mb-3">Wallet</p>
 
-                    
+                    <!-- Balance Card -->
                     <div class="rounded-[18px] bg-[#0e1660] text-white px-4 py-3.5">
                       <p class="text-[10px] text-white/85">Wallet Balance</p>
                       <p class="font-bold text-[24px] tracking-[-0.01em] mt-1">₦50,000</p>
                     </div>
 
-                    
+                    <!-- Funding Options -->
                     <p class="text-[11px] font-medium text-[#0d0d0d] mt-3.5 mb-1.5">Funding Options</p>
                     <div class="rounded-[18px] bg-[#0e1660] p-2.5 grid grid-cols-2 gap-2">
                       <span class="rounded-full bg-[#2b3378] text-white text-[9px] py-2 flex items-center justify-center gap-1.5">
@@ -1226,7 +1244,7 @@
                       </span>
                     </div>
 
-                    
+                    <!-- Withdrawal -->
                     <p class="text-[11px] font-medium text-[#0d0d0d] mt-3.5 mb-1.5">Withdrawal</p>
                     <div class="rounded-[18px] bg-[#0e1660] p-2.5">
                       <div class="rounded-full bg-[#2b3378] text-white/55 text-[9.5px] px-3.5 py-2.5">Enter Amount (₦)</div>
@@ -1239,7 +1257,7 @@
                       <div class="mt-3 rounded-full bg-[#5cb3e2] text-white text-[10.5px] font-medium text-center py-2.5">Withdraw</div>
                     </div>
 
-                    
+                    <!-- Bottom Nav (Wallet active) -->
                     <div class="mt-auto rounded-full bg-[#0e1660] px-3 py-2 flex items-center justify-between text-white">
                       <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-3v9h-5v-6h-2v6H6v-9H3l9-8z" /></svg>
                       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h10a5 5 0 015 5v3a3 3 0 01-5.2 2L15 15H9l-1.8 2A3 3 0 012 15v-3a5 5 0 015-5zm1 3v2H6v1.5h2v2h1.5v-2h2V12h-2v-2H8zm8 1a1 1 0 100 2 1 1 0 000-2zm2 2a1 1 0 100 2 1 1 0 000-2z" /></svg>
@@ -1251,9 +1269,11 @@
                     </div>
                   </div>
 
-                  
+                  <!-- ===========================================================
+                      SCREEN 1: HOME — Quick Actions & Betting Lobbies (Figma)
+                  =========================================================== -->
                   <div class="how-phone-screen absolute inset-0 pt-12 px-3.5 pb-3 flex flex-col" data-screen="1">
-                    
+                    <!-- Profile Row -->
                     <div class="flex items-center gap-2.5 mb-3">
                       <img src="/public/images/app-avatar.png" alt="John" class="w-9 h-9 rounded-full object-cover" />
                       <div class="leading-tight">
@@ -1262,7 +1282,7 @@
                       </div>
                     </div>
 
-                    
+                    <!-- Balance Card with Actions -->
                     <div class="rounded-[18px] bg-[#0e1660] text-white px-4 pt-3 pb-3.5">
                       <p class="text-[10px] text-white/85">Wallet Balance</p>
                       <p class="font-bold text-[22px] tracking-[-0.01em] mt-0.5">₦50,000</p>
@@ -1272,7 +1292,7 @@
                       </div>
                     </div>
 
-                    
+                    <!-- Quick Actions -->
                     <p class="text-[11px] font-medium text-[#0d0d0d] mt-3 mb-1.5">Quick Actions</p>
                     <div class="grid grid-cols-2 gap-2.5">
                       <div class="rounded-[16px] bg-[#0e1660] p-1.5">
@@ -1291,7 +1311,7 @@
                       </div>
                     </div>
 
-                    
+                    <!-- Betting Lobbies Table -->
                     <p class="text-[11px] font-medium text-[#0d0d0d] mt-3 mb-1.5">Betting Lobbies</p>
                     <div class="rounded-[16px] bg-[#0e1660] text-white px-2.5 py-2">
                       <div class="grid grid-cols-[1.1fr_1fr_1fr_auto] gap-1 text-[7.5px] text-white/55 pb-1.5 border-b border-white/10">
@@ -1317,7 +1337,7 @@
                       </div>
                     </div>
 
-                    
+                    <!-- Bottom Nav (Home active) -->
                     <div class="mt-auto rounded-full bg-[#0e1660] px-3 py-2 flex items-center justify-between text-white">
                       <span class="rounded-full bg-[#5cb3e2] px-4 py-1.5 text-[10px] font-medium flex items-center gap-1.5">
                         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-3v9h-5v-6h-2v6H6v-9H3l9-8z" /></svg>
@@ -1329,7 +1349,9 @@
                     </div>
                   </div>
 
-                  
+                  <!-- ===========================================================
+                      SCREEN 2: CREATE GAME LOBBY — Room Code & Betting Setup (Figma)
+                  =========================================================== -->
                   <div class="how-phone-screen absolute inset-0 pt-12 px-3.5 pb-3 flex flex-col" data-screen="2">
                     <div class="relative text-center mb-3">
                       <span class="absolute left-0 top-0 text-[14px] text-[#0d0d0d]">←</span>
@@ -1358,7 +1380,7 @@
                       </div>
                     </div>
 
-                    
+                    <!-- 6-digit Room Code -->
                     <div class="rounded-[16px] bg-[#0e1660] p-2.5 mt-2.5">
                       <p class="text-[9px] text-white/85 mb-1.5">Enter 6-digit room code</p>
                       <div class="grid grid-cols-6 gap-1.5">
@@ -1372,7 +1394,7 @@
                       <div class="mt-2 rounded-full bg-white text-[#0e1660] text-[10px] font-medium text-center py-2">Join Room</div>
                     </div>
 
-                    
+                    <!-- Betting Setup -->
                     <p class="text-[11px] font-medium text-[#0d0d0d] mt-3 mb-1.5">Betting Setup</p>
                     <div class="rounded-[16px] bg-[#0e1660] text-white p-2.5">
                       <p class="text-[8.5px] text-white/75">Stake Amount (Min: ₦5,000)</p>
@@ -1396,7 +1418,7 @@
                       </div>
                     </div>
 
-                    
+                    <!-- Additional Settings -->
                     <div class="mt-auto rounded-full bg-[#0e1660] text-white px-3.5 py-2.5 flex items-center justify-between">
                       <span class="flex items-center gap-2 text-[9.5px]">
                         <span class="w-4 h-4 rounded-full bg-white/15 flex items-center justify-center text-[8px]">💬</span>
@@ -1406,14 +1428,16 @@
                     </div>
                   </div>
 
-                  
+                  <!-- ===========================================================
+                      SCREEN 3: TRANSACTION HISTORY — Wins & Withdrawals (Figma)
+                  =========================================================== -->
                   <div class="how-phone-screen absolute inset-0 pt-12 px-3.5 pb-3 flex flex-col" data-screen="3">
                     <div class="relative text-center mb-3">
                       <span class="absolute left-0 top-0 text-[14px] text-[#0d0d0d]">←</span>
                       <p class="font-semibold text-[13px] text-[#0d0d0d]">Transaction History</p>
                     </div>
 
-                    
+                    <!-- Filter Tabs -->
                     <div class="rounded-full bg-[#0e1660] p-1 flex items-center justify-between text-[8.5px] text-white/80 mb-2.5">
                       <span class="bg-white text-[#0e1660] rounded-full px-3 py-1 font-medium">All</span>
                       <span class="px-1">Deposit</span>
@@ -1502,11 +1526,13 @@
         </div>
       </section>
 
-      
+      <!-- ===================================================================
+          FAQ SECTION (Clean Light Contrast Surface)
+      =================================================================== -->
       <section id="faq" class="relative bg-[#f8f9fc] text-[#0d0d0d] py-20 sm:py-28 border-t border-gray-200/80">
         <div class="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
+            <!-- Left Column: Minimal Heading -->
             <div class="lg:col-span-4 lg:sticky lg:top-24">
               <h2 class="font-poppins font-bold text-[34px] sm:text-[44px] leading-[1.1] tracking-tight text-[#0d0d0d]">
                 Got questions?
@@ -1523,9 +1549,9 @@
               </a>
             </div>
 
-            
+            <!-- Right Column: Accordion List -->
             <div class="lg:col-span-8 space-y-3.5">
-              
+              <!-- FAQ 1 -->
               <div class="faq-item is-open rounded-2xl bg-white border border-gray-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.03)] transition-colors hover:border-gray-300">
                 <button
                   type="button"
@@ -1550,7 +1576,7 @@
                 </div>
               </div>
 
-              
+              <!-- FAQ 2 -->
               <div class="faq-item rounded-2xl bg-white border border-gray-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.03)] transition-colors hover:border-gray-300">
                 <button
                   type="button"
@@ -1575,7 +1601,7 @@
                 </div>
               </div>
 
-              
+              <!-- FAQ 3 -->
               <div class="faq-item rounded-2xl bg-white border border-gray-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.03)] transition-colors hover:border-gray-300">
                 <button
                   type="button"
@@ -1600,7 +1626,7 @@
                 </div>
               </div>
 
-              
+              <!-- FAQ 4 -->
               <div class="faq-item rounded-2xl bg-white border border-gray-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.03)] transition-colors hover:border-gray-300">
                 <button
                   type="button"
@@ -1625,7 +1651,7 @@
                 </div>
               </div>
 
-              
+              <!-- FAQ 5 -->
               <div class="faq-item rounded-2xl bg-white border border-gray-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.03)] transition-colors hover:border-gray-300">
                 <button
                   type="button"
@@ -1650,7 +1676,7 @@
                 </div>
               </div>
 
-              
+              <!-- FAQ 6 -->
               <div class="faq-item rounded-2xl bg-white border border-gray-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.03)] transition-colors hover:border-gray-300">
                 <button
                   type="button"
@@ -1679,21 +1705,23 @@
         </div>
       </section>
 
-      
+      <!-- ===================================================================
+          FOOTER (Rounded Card + Giant Cropped Wordmark)
+      =================================================================== -->
       <footer id="about" class="bg-white text-[#0d0d0d] px-4 sm:px-8 lg:px-10 pt-6 pb-8">
         <div class="max-w-[1380px] mx-auto">
-          
+          <!-- Rounded Card -->
           <div class="rounded-[30px] sm:rounded-[44px] bg-[#f3f3f5] overflow-hidden pt-10 sm:pt-14 px-7 sm:px-12 lg:px-16">
-            
+            <!-- Top 4-Column Row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
-              
+              <!-- Col 1: Short Statement -->
               <div class="lg:col-span-4">
                 <p class="font-poppins font-medium text-[18px] sm:text-[20px] leading-[1.35] text-[#0d0d0d] max-w-[260px]">
                   Play games. Challenge friends. Win real cash.
                 </p>
               </div>
 
-              
+              <!-- Col 2: Explore -->
               <div class="lg:col-span-2">
                 <h3 class="text-[13px] font-semibold text-[#0d0d0d] mb-3.5">Explore</h3>
                 <ul class="space-y-2 text-[13.5px] text-[#6b7280]">
@@ -1703,7 +1731,7 @@
                 </ul>
               </div>
 
-              
+              <!-- Col 3: Follow us (Pill Chips) -->
               <div class="lg:col-span-3">
                 <h3 class="text-[13px] font-semibold text-[#0d0d0d] mb-3.5">Follow us</h3>
                 <div class="flex flex-wrap gap-2">
@@ -1756,7 +1784,7 @@
                 </div>
               </div>
 
-              
+              <!-- Col 4: Action Links -->
               <div class="lg:col-span-3 space-y-5">
                 <a href="#top" class="group block">
                   <div class="flex items-center gap-2.5">
@@ -1786,7 +1814,7 @@
               </div>
             </div>
 
-            
+            <!-- Giant Cropped Wordmark -->
             <div class="mt-8 sm:mt-12 -mx-6 sm:-mx-12 lg:-mx-16 select-none pointer-events-none">
               <div class="font-poppins font-extrabold tracking-[-0.065em] leading-[0.74] text-[#0d0d0d] text-[27vw] sm:text-[24vw] lg:text-[22vw] text-center translate-y-[12%]">
                 Pelebet
@@ -1794,7 +1822,7 @@
             </div>
           </div>
 
-          
+          <!-- Bottom Legal Strip -->
           <div class="mt-5 px-2 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12.5px] text-[#6b7280]">
             <div class="flex items-center gap-4">
               <span>PeleBet © 2026</span>
@@ -2029,7 +2057,7 @@
     }
 
     function onScrollHow() {
-      if (!howSection || window.innerWidth < 1024) return;
+      if (!howSection) return;
       var rect = howSection.getBoundingClientRect();
       var scrollable = rect.height - window.innerHeight;
       if (scrollable <= 0) return;
@@ -2044,7 +2072,7 @@
     stepCards.forEach(function (card, idx) {
       card.addEventListener("click", function () {
         setHowStep(idx);
-        if (howSection && window.innerWidth >= 1024) {
+        if (howSection) {
           var scrollable = howSection.offsetHeight - window.innerHeight;
           var targetY = howSection.offsetTop + (idx / totalSteps) * scrollable + 20;
           window.scrollTo({ top: targetY, behavior: "smooth" });

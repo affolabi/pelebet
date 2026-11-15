@@ -171,7 +171,7 @@ export default function LandingPage() {
     }
 
     function onScrollHow() {
-      if (!howSection || window.innerWidth < 1024) return;
+      if (!howSection) return;
       const rect = howSection.getBoundingClientRect();
       const scrollable = rect.height - window.innerHeight;
       if (scrollable <= 0) return;
@@ -187,7 +187,7 @@ export default function LandingPage() {
     stepCards.forEach((card, idx) => {
       const handler = () => {
         setHowStep(idx);
-        if (howSection && window.innerWidth >= 1024) {
+        if (howSection) {
           const scrollable = howSection.offsetHeight - window.innerHeight;
           const targetY =
             howSection.offsetTop + (idx / totalSteps) * scrollable + 20;
@@ -498,8 +498,8 @@ export default function LandingPage() {
               </div>
 
               {/* MOBILE / TABLET HERO IMAGE (Under subtitle, flush right & tilted into frame side) */}
-              <div className="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-5 mb-2 relative z-10 anim-open-hero-art">
-                <div className="w-[96%] max-w-[430px] sm:max-w-[500px] rotate-[10deg] origin-bottom-right translate-x-3 sm:translate-x-5">
+              <div className="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-6 mb-4 relative z-10 anim-open-hero-art">
+                <div className="w-[96%] max-w-[420px] sm:max-w-[500px] rotate-[22deg] origin-bottom-right translate-x-7 sm:translate-x-10">
                   <img
                     src="/public/images/hero-section-image.png?v=3"
                     alt="PeleBet App Mockup with Hand, Soccer Ball, and 8-Ball"
@@ -969,10 +969,10 @@ export default function LandingPage() {
       =================================================================== */}
       <section
         id="how-it-works"
-        className="relative bg-[#0d0d0d] text-white py-14 sm:py-16 lg:py-0 lg:h-[360vh] select-none overflow-hidden lg:overflow-visible"
+        className="relative bg-[#0d0d0d] text-white h-[280vh] lg:h-[360vh] select-none"
       >
-        {/* Sticky Full-Viewport Container (Desktop) / Normal Flow (Mobile) */}
-        <div className="lg:sticky lg:top-0 lg:h-screen w-full lg:overflow-hidden flex flex-col justify-center">
+        {/* Sticky Full-Viewport Container */}
+        <div className="sticky top-0 h-[100svh] w-full overflow-hidden flex flex-col justify-center py-3 lg:py-0">
           {/* Confetti Canvas Overlay (Fires when reaching Step 04: Cash Out) */}
           <canvas
             id="cashout-confetti-canvas"
@@ -1093,8 +1093,8 @@ export default function LandingPage() {
             {/* ===============================================================
                 RIGHT COLUMN: iPhone Frame with 4 Real PeleBet App Screens (From Figma)
             =============================================================== */}
-            <div className="lg:col-span-6 flex justify-center lg:justify-end mt-4 lg:mt-0">
-              <div className="w-[280px] sm:w-[310px] lg:w-[320px] h-[565px] sm:h-[625px] lg:h-[650px] rounded-[44px] lg:rounded-[46px] bg-[#1b1b22] p-[9px] shadow-[0_32px_90px_rgba(0,0,0,0.65)] ring-1 ring-white/20 relative">
+            <div className="lg:col-span-6 flex justify-center lg:justify-end mt-1 lg:mt-0">
+              <div className="w-[240px] h-[440px] sm:w-[290px] sm:h-[560px] lg:w-[320px] lg:h-[650px] rounded-[36px] sm:rounded-[42px] lg:rounded-[46px] bg-[#1b1b22] p-[7px] lg:p-[9px] shadow-[0_32px_90px_rgba(0,0,0,0.65)] ring-1 ring-white/20 relative">
                 <div className="w-full h-full rounded-[38px] bg-[#f3f3f7] text-[#0e1660] relative overflow-hidden font-mona">
                   {/* Dynamic Island + Status Bar (shared) */}
                   <div className="absolute top-0 inset-x-0 z-40 h-10 flex items-center justify-between px-6 text-[11px] font-semibold text-[#0d0d0d] pointer-events-none">
