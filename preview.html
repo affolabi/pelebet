@@ -587,9 +587,9 @@
           <!-- HERO 2-COLUMN MAIN STAGE -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-7 sm:pt-10 lg:pt-12 flex-1">
             <!-- LEFT COLUMN: Typography, Left-Border Copy, Store Pills, Stepped Card -->
-            <div class="lg:col-span-6 pb-8 sm:pb-12 lg:pb-14 lg:pl-2 relative z-20">
+            <div class="lg:col-span-6 pb-8 sm:pb-12 lg:pb-14 lg:pl-2 relative z-20 flex flex-col lg:block">
               <!-- Two-Tone Mona Sans Headline -->
-              <h1 class="font-mona tracking-[-0.035em] leading-[1.08]">
+              <h1 class="font-mona tracking-[-0.035em] leading-[1.08] order-1">
                 <span class="block text-[38px] sm:text-[56px] lg:text-[64px] font-light text-[#6e6e77] anim-open-line-1">
                   Play Games.
                 </span>
@@ -599,14 +599,14 @@
               </h1>
 
               <!-- Subtitle with Vertical Left Line -->
-              <div class="mt-6 border-l-[2px] border-[#3f3f46] pl-5 py-0.5 max-w-[440px] anim-open-sub">
+              <div class="mt-6 border-l-[2px] border-[#3f3f46] pl-5 py-0.5 max-w-[440px] anim-open-sub order-2">
                 <p class="font-inter text-[#6b7280] text-[15px] sm:text-[16px] leading-[1.65] font-normal">
                   Step into Africa’s biggest mobile gaming arena where every card, shot, and throw could earn you real money.
                 </p>
               </div>
 
               <!-- MOBILE / TABLET HERO IMAGE (Under subtitle, flush right & tilted into frame side) -->
-              <div class="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-6 mb-4 relative z-10 anim-open-hero-art">
+              <div class="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-6 mb-0 relative z-10 anim-open-hero-art order-3">
                 <div class="w-[96%] max-w-[420px] sm:max-w-[500px] rotate-[22deg] origin-bottom-right translate-x-7 sm:translate-x-10">
                   <img
                     src="/public/images/hero-section-image.png?v=3"
@@ -616,8 +616,50 @@
                 </div>
               </div>
 
+              <!-- MOBILE / TABLET SLIDESHOW MARQUEE (Directly under hero image) -->
+              <div class="lg:hidden -mx-4 sm:-mx-8 bg-white text-[#0d0d0d] py-5 sm:py-6 overflow-hidden select-none border-y border-gray-200/80 relative z-20 order-4">
+                <div class="pelebet-marquee-track flex items-center w-max">
+                  <div class="flex items-center shrink-0">
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">LUDO</span>
+                    <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">WHOT</span>
+                    <span class="text-[#f6be56] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">8-BALL POOL</span>
+                    <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">PENALTY KICK</span>
+                    <span class="text-[#f6be56] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">LUDO</span>
+                    <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">WHOT</span>
+                    <span class="text-[#f6be56] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">8-BALL POOL</span>
+                    <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">PENALTY KICK</span>
+                    <span class="text-[#f6be56] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                  </div>
+                  <div class="flex items-center shrink-0" aria-hidden="true">
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">LUDO</span>
+                    <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">WHOT</span>
+                    <span class="text-[#f6be56] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">8-BALL POOL</span>
+                    <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">PENALTY KICK</span>
+                    <span class="text-[#f6be56] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">LUDO</span>
+                    <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">WHOT</span>
+                    <span class="text-[#f6be56] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">8-BALL POOL</span>
+                    <span class="text-[#2d7ff9] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                    <span class="font-mona font-bold text-[16px] sm:text-[20px] tracking-[0.16em] uppercase px-6 sm:px-9">PENALTY KICK</span>
+                    <span class="text-[#f6be56] font-mona font-extrabold text-[20px] sm:text-[24px] leading-none">*</span>
+                  </div>
+                </div>
+              </div>
+
               <!-- Apple Store & Google Play Pill Buttons -->
-              <div class="mt-6 lg:mt-8 flex flex-wrap items-center gap-4 anim-open-ctas">
+              <div class="mt-6 lg:mt-8 flex flex-wrap items-center gap-4 anim-open-ctas order-5">
                 <!-- Apple Store Solid Black Pill -->
                 <a
                   href="#download-ios"
@@ -658,8 +700,8 @@
                 </a>
               </div>
 
-              <!-- Bottom-Left Stepped Card ("Bet on Your Skill / How it works") + "100K+ Downloads" -->
-              <div class="mt-11 sm:mt-12 flex flex-wrap items-end gap-8 sm:gap-10 anim-open-stepped">
+              <!-- Bottom-Left Stepped Card ("Bet on Your Skill / How it works") + "100K+ Downloads" (Desktop only) -->
+              <div class="mt-11 sm:mt-12 hidden lg:flex flex-wrap items-end gap-8 sm:gap-10 anim-open-stepped">
                 <!-- Stepped Card Container -->
                 <div class="relative pt-1 pl-3 group/step">
                   <!-- Upper Soft-Gray Card -->
@@ -718,9 +760,9 @@
       </section>
 
       <!-- ===================================================================
-          INFINITE SCROLLING GAMES MARQUEE BAR (Under Hero Section, Masks Hand Edge)
+          INFINITE SCROLLING GAMES MARQUEE BAR (Desktop Only, Under Hero Section)
       =================================================================== -->
-      <div class="w-full bg-white text-[#0d0d0d] py-5 sm:py-6 overflow-hidden select-none border-y border-gray-200/80 relative z-20">
+      <div class="hidden lg:block w-full bg-white text-[#0d0d0d] py-5 sm:py-6 overflow-hidden select-none border-y border-gray-200/80 relative z-20">
         <div class="pelebet-marquee-track flex items-center w-max">
           <!-- Track Half 1 -->
           <div class="flex items-center shrink-0">
