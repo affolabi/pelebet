@@ -497,8 +497,19 @@ export default function LandingPage() {
                 </p>
               </div>
 
+              {/* MOBILE / TABLET HERO IMAGE (Under subtitle, flush right & tilted into frame side) */}
+              <div className="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-5 mb-2 relative z-10 anim-open-hero-art">
+                <div className="w-[96%] max-w-[430px] sm:max-w-[500px] rotate-[10deg] origin-bottom-right translate-x-3 sm:translate-x-5">
+                  <img
+                    src="/public/images/hero-section-image.png?v=3"
+                    alt="PeleBet App Mockup with Hand, Soccer Ball, and 8-Ball"
+                    className="w-full h-auto object-contain object-right-bottom block anim-float-gentle"
+                  />
+                </div>
+              </div>
+
               {/* Apple Store & Google Play Pill Buttons */}
-              <div className="mt-8 flex flex-wrap items-center gap-4 anim-open-ctas">
+              <div className="mt-6 lg:mt-8 flex flex-wrap items-center gap-4 anim-open-ctas">
                 {/* Apple Store Solid Black Pill */}
                 <a
                   href="#download-ios"
@@ -592,17 +603,6 @@ export default function LandingPage() {
                     <span className="font-inter font-normal text-[#4b5563]">Downloads</span>
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* MOBILE / TABLET HERO IMAGE (Visible below lg breakpoint, flush right & tilted to tuck cut edge into frame side) */}
-            <div className="lg:hidden flex justify-end -mr-4 sm:-mr-8 -mb-8 sm:-mb-10 pt-2 relative z-10 anim-open-hero-art">
-              <div className="w-[96%] max-w-[430px] sm:max-w-[500px] rotate-[10deg] origin-bottom-right translate-x-3 sm:translate-x-5">
-                <img
-                  src="/public/images/hero-section-image.png?v=3"
-                  alt="PeleBet App Mockup with Hand, Soccer Ball, and 8-Ball"
-                  className="w-full h-auto object-contain object-right-bottom block anim-float-gentle"
-                />
               </div>
             </div>
           </div>
