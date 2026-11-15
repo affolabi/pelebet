@@ -503,7 +503,7 @@ export default function LandingPage() {
                   <img
                     src="/public/images/mobile-hero-card-image.png"
                     alt="PeleBet App Mockup with Hand, Soccer Ball, and 8-Ball"
-                    className="w-full h-auto object-contain object-right-bottom block"
+                    className="w-full h-auto object-contain object-right-bottom block [filter:drop-shadow(1px_0_0_rgba(0,0,0,0.05))_drop-shadow(-1px_0_0_rgba(0,0,0,0.05))_drop-shadow(0_1px_0_rgba(0,0,0,0.05))_drop-shadow(0_-1px_0_rgba(0,0,0,0.05))]"
                   />
                 </div>
               </div>
