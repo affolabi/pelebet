@@ -483,10 +483,10 @@ export default function LandingPage() {
               {/* Two-Tone Mona Sans Headline */}
               <h1 className="font-mona tracking-[-0.035em] leading-[1.08] order-1">
                 <span className="block text-[38px] sm:text-[56px] lg:text-[64px] font-light text-[#6e6e77] anim-open-line-1">
-                  Play Games.
+                  Bet Like
                 </span>
                 <span className="block text-[38px] sm:text-[56px] lg:text-[64px] font-semibold text-[#0d0d0d] mt-0.5 anim-open-line-2">
-                  Win Real Cash.
+                  Never Before.
                 </span>
               </h1>
 
