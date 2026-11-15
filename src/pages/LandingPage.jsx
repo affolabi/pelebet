@@ -324,7 +324,7 @@ export default function LandingPage() {
             <div className="flex items-center gap-2 sm:gap-3">
               <a
                 href="#download-ios"
-                className="group inline-flex items-center gap-2 sm:gap-3.5 bg-[#082066] hover:bg-[#06174d] text-white rounded-[14px] sm:rounded-[18px] px-2.5 py-2 sm:px-4 sm:py-2.5 sm:pr-6 shadow-[0_12px_30px_rgba(8,32,102,0.28)] border border-white/15 transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-2 sm:gap-3.5 bg-black/90 hover:bg-black text-white rounded-[14px] sm:rounded-[18px] px-2.5 py-2 sm:px-4 sm:py-2.5 sm:pr-6 shadow-[0_12px_30px_rgba(0,0,0,0.22)] border border-white/15 transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5"
               >
                 {/* Crisp White QR Code SVG with 3 Rounded Corner Finders & Matrix Dots */}
                 <svg
