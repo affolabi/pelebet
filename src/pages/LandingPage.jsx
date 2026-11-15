@@ -497,13 +497,13 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              {/* MOBILE / TABLET HERO IMAGE (Under subtitle, upright & spaced below text) */}
-              <div className="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-10 sm:mt-12 mb-0 relative z-10 anim-open-hero-art order-3">
-                <div className="w-[94%] max-w-[390px] sm:max-w-[460px] translate-x-2 sm:translate-x-4">
+              {/* MOBILE / TABLET HERO IMAGE (Under subtitle, upright, flush right & bottom above slideshow) */}
+              <div className="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-8 sm:mt-10 mb-0 relative z-10 anim-open-hero-art order-3">
+                <div className="w-[92%] max-w-[390px] sm:max-w-[460px]">
                   <img
-                    src="/public/images/hero-section-image.png?v=3"
+                    src="/public/images/mobile-hero-card-image.png"
                     alt="PeleBet App Mockup with Hand, Soccer Ball, and 8-Ball"
-                    className="w-full h-auto object-contain object-right-bottom block anim-float-gentle"
+                    className="w-full h-auto object-contain object-right-bottom block"
                   />
                 </div>
               </div>
