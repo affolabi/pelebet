@@ -1,0 +1,341 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #0d0d0d;
+    background-color: #ffffff;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-mona {
+  font-family: 'Mona Sans', 'Mona-Sans', 'Inter', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes pelebetMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.pelebet-marquee-track {
+  animation: pelebetMarquee 22s linear infinite;
+  will-change: transform;
+}
+
+.pelebet-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ===================================================================
+   OPENING / ENTRANCE INTERACTIONS (HERO)
+=================================================================== */
+@keyframes openFadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes openSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(34px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes openHeroArt {
+  0% {
+    opacity: 0;
+    transform: translateX(48px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes ringPulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.06);
+    opacity: 0.52;
+  }
+}
+
+.hero-section-observer:not(.is-visible) .anim-open-nav,
+.hero-section-observer:not(.is-visible) .anim-open-line-1,
+.hero-section-observer:not(.is-visible) .anim-open-line-2,
+.hero-section-observer:not(.is-visible) .anim-open-sub,
+.hero-section-observer:not(.is-visible) .anim-open-ctas,
+.hero-section-observer:not(.is-visible) .anim-open-stepped,
+.hero-section-observer:not(.is-visible) .anim-open-hero-art {
+  animation: none !important;
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.hero-section-observer.is-visible .anim-open-nav {
+  animation: openFadeDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-section-observer.is-visible .anim-open-line-1 {
+  animation: openSlideUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+
+.hero-section-observer.is-visible .anim-open-line-2 {
+  animation: openSlideUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
+}
+
+.hero-section-observer.is-visible .anim-open-sub {
+  animation: openSlideUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both;
+}
+
+.hero-section-observer.is-visible .anim-open-ctas {
+  animation: openSlideUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.38s both;
+}
+
+.hero-section-observer.is-visible .anim-open-stepped {
+  animation: openSlideUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.48s both;
+}
+
+.hero-section-observer.is-visible .anim-open-hero-art {
+  animation: openHeroArt 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.anim-float-gentle {
+  animation: floatGentle 5.5s ease-in-out 1.2s infinite;
+}
+
+.anim-ring-pulse {
+  animation: ringPulse 5s ease-in-out infinite;
+}
+
+.anim-ring-pulse-delayed {
+  animation: ringPulse 5s ease-in-out 1.4s infinite;
+}
+
+/* ===================================================================
+   SCROLL-REVEAL & STAGGERED CARD / CHAT / SWIPE INTERACTIONS
+=================================================================== */
+.reveal-item {
+  opacity: 0;
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(42px);
+}
+
+.reveal-left {
+  transform: translateY(36px) translateX(-24px);
+}
+
+.reveal-right {
+  transform: translateY(36px) translateX(24px);
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+.reveal-item .reveal-child-text,
+.reveal-item .swipe-pill-item,
+.reveal-item .chat-bubble-anim,
+.reveal-item .game-fan-card {
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+
+.reveal-item.is-visible .reveal-child-text {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.12s;
+}
+
+.reveal-item.is-visible .stagger-1 {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.22s;
+}
+
+.reveal-item.is-visible .stagger-2 {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.36s;
+}
+
+.reveal-item.is-visible .stagger-3 {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.5s;
+}
+
+.reveal-item.is-visible .stagger-4 {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.62s;
+}
+
+.bento-card {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
+}
+
+/* ===================================================================
+   HOW IT WORKS — STICKY SCROLL-DRIVEN PHONE & STEP PILLS
+=================================================================== */
+.how-phone-screen {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(28px) scale(0.96);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.how-phone-screen.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  z-index: 20;
+}
+
+.how-step-caption {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.how-step-caption.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.how-step-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0.48;
+  touch-action: manipulation;
+  transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.how-step-card:hover {
+  opacity: 0.85;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.how-step-card.is-active {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 1;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+@media (min-width: 1024px) {
+  .how-step-card.is-active {
+    transform: translateX(8px);
+  }
+}
+
+.how-step-card .step-num-badge {
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.how-step-card[data-step="0"].is-active .step-num-badge {
+  background-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.45);
+}
+
+.how-step-card[data-step="1"].is-active .step-num-badge {
+  background-color: #5cb3e2;
+  color: #091540;
+  box-shadow: 0 0 18px rgba(92, 179, 226, 0.5);
+}
+
+.how-step-card[data-step="2"].is-active .step-num-badge {
+  background-color: #8b5cf6;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.45);
+}
+
+.how-step-card[data-step="3"].is-active .step-num-badge {
+  background-color: #f6be56;
+  color: #091540;
+  box-shadow: 0 0 20px rgba(246, 190, 86, 0.55);
+}
+
+/* FAQ Accordion */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-item.is-open .faq-panel {
+  grid-template-rows: 1fr;
+}
+
+.faq-panel-inner {
+  overflow: hidden;
+}
+
+.faq-item .faq-icon {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s ease, color 0.25s ease;
+}
+
+.faq-item.is-open .faq-icon {
+  transform: rotate(45deg);
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
