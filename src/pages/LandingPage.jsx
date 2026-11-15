@@ -266,9 +266,9 @@ export default function LandingPage() {
       {/* ===================================================================
           HERO SECTION (White Minimalist Stage + Right-Bleed Hero Artwork)
       =================================================================== */}
-      <section className="hero-section-observer is-visible relative bg-white border-b border-gray-200 overflow-hidden lg:min-h-[790px] xl:min-h-[830px] flex flex-col justify-between">
+      <section className="hero-section-observer is-visible relative bg-white overflow-x-clip lg:min-h-[790px] xl:min-h-[830px] flex flex-col justify-between">
         {/* RIGHT-BLEED HERO IMAGE */}
-        <div className="hidden lg:block pointer-events-none select-none absolute top-0 right-0 bottom-0 z-10 anim-open-hero-art">
+        <div className="hidden lg:block pointer-events-none select-none absolute top-4 right-0 -bottom-8 xl:-bottom-10 z-10 anim-open-hero-art">
           <img
             src="/public/images/hero-section-image.png?v=3"
             alt="PeleBet App Mockup with Hand, Soccer Ball, and 8-Ball"
@@ -595,8 +595,8 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* MOBILE / TABLET HERO IMAGE (Visible below lg breakpoint, flush right & bottom) */}
-            <div className="lg:hidden flex justify-end -mr-4 sm:-mr-8 mt-2 anim-open-hero-art">
+            {/* MOBILE / TABLET HERO IMAGE (Visible below lg breakpoint, flush right & tucked under marquee) */}
+            <div className="lg:hidden flex justify-end -mr-4 sm:-mr-8 -mb-6 sm:-mb-8 mt-2 relative z-10 anim-open-hero-art">
               <img
                 src="/public/images/hero-section-image.png?v=3"
                 alt="PeleBet App Mockup with Hand, Soccer Ball, and 8-Ball"
@@ -608,9 +608,9 @@ export default function LandingPage() {
       </section>
 
       {/* ===================================================================
-          INFINITE SCROLLING GAMES MARQUEE BAR (Under Hero Section, No BG)
+          INFINITE SCROLLING GAMES MARQUEE BAR (Under Hero Section, Masks Hand Edge)
       =================================================================== */}
-      <div className="w-full bg-transparent text-[#0d0d0d] py-5 sm:py-6 overflow-hidden select-none border-b border-gray-200/80 relative z-20">
+      <div className="w-full bg-white text-[#0d0d0d] py-5 sm:py-6 overflow-hidden select-none border-y border-gray-200/80 relative z-20">
         <div className="pelebet-marquee-track flex items-center w-max">
           {/* Track Half 1 */}
           <div className="flex items-center shrink-0">
