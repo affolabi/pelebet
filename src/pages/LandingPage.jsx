@@ -30,7 +30,7 @@ export default function LandingPage() {
     const progressBar = document.getElementById('how-progress-bar');
     const confettiCanvas = document.getElementById('cashout-confetti-canvas');
     const totalSteps = 4;
-    let activeStep = -1;
+    let activeStep = 0;
     let confettiAnimId = null;
 
     function launchCashoutConfetti() {
@@ -130,7 +130,7 @@ export default function LandingPage() {
               ctx.beginPath();
               ctx.arc(0, 0, p.r, 0, Math.PI * 2);
               ctx.fill();
-            } else if (p.shape === 'ribbon') {
+            } else if (p.shape === 'ribbon' && typeof ctx.roundRect === 'function') {
               ctx.beginPath();
               ctx.roundRect(-p.w / 2, -p.h / 2, p.w, p.h, 2);
               ctx.fill();
@@ -170,44 +170,11 @@ export default function LandingPage() {
       }
     }
 
-    let mobileTimer = null;
-    function startMobileAutoplay() {
-      if (mobileTimer || window.innerWidth >= 1024) return;
-      mobileTimer = window.setInterval(() => {
-        if (window.innerWidth >= 1024) {
-          stopMobileAutoplay();
-          return;
-        }
-        setHowStep((activeStep + 1) % totalSteps);
-      }, 2600);
-    }
-    function stopMobileAutoplay() {
-      if (mobileTimer) {
-        window.clearInterval(mobileTimer);
-        mobileTimer = null;
-      }
-    }
-
-    let howObserver = null;
-    if (howSection && 'IntersectionObserver' in window) {
-      howObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (window.innerWidth < 1024) {
-              if (entry.isIntersecting) startMobileAutoplay();
-              else stopMobileAutoplay();
-            }
-          });
-        },
-        { threshold: 0.25 }
-      );
-      howObserver.observe(howSection);
-    }
-
     function onScrollHow() {
-      if (!howSection || window.innerWidth < 1024) return;
+      if (!howSection) return;
       const rect = howSection.getBoundingClientRect();
-      const scrollable = rect.height - window.innerHeight;
+      const viewportH = window.innerHeight || document.documentElement.clientHeight;
+      const scrollable = rect.height - viewportH;
       if (scrollable <= 0) return;
       const progress = Math.max(0, Math.min(0.999, -rect.top / scrollable));
       const stepIndex = Math.floor(progress * totalSteps);
@@ -215,20 +182,19 @@ export default function LandingPage() {
     }
 
     window.addEventListener('scroll', onScrollHow, { passive: true });
+    window.addEventListener('resize', onScrollHow);
     onScrollHow();
 
     const clickHandlers = [];
     stepCards.forEach((card, idx) => {
       const handler = () => {
         setHowStep(idx);
-        if (howSection && window.innerWidth >= 1024) {
-          const scrollable = howSection.offsetHeight - window.innerHeight;
-          const targetY =
-            howSection.offsetTop + (idx / totalSteps) * scrollable + 20;
+        if (howSection) {
+          const viewportH = window.innerHeight || document.documentElement.clientHeight;
+          const sectionTop = howSection.getBoundingClientRect().top + window.scrollY;
+          const scrollable = howSection.offsetHeight - viewportH;
+          const targetY = sectionTop + ((idx + 0.5) / totalSteps) * scrollable;
           window.scrollTo({ top: targetY, behavior: 'smooth' });
-        } else {
-          stopMobileAutoplay();
-          startMobileAutoplay();
         }
       };
       card.addEventListener('click', handler);
@@ -281,10 +247,9 @@ export default function LandingPage() {
 
     return () => {
       if (observer) observer.disconnect();
-      if (howObserver) howObserver.disconnect();
-      stopMobileAutoplay();
       if (confettiAnimId) cancelAnimationFrame(confettiAnimId);
       window.removeEventListener('scroll', onScrollHow);
+      window.removeEventListener('resize', onScrollHow);
       clickHandlers.forEach(({ card, handler }) =>
         card.removeEventListener('click', handler)
       );
@@ -1050,10 +1015,10 @@ export default function LandingPage() {
       =================================================================== */}
       <section
         id="how-it-works"
-        className="relative bg-[#0d0d0d] text-white py-14 sm:py-16 lg:py-0 lg:h-[360vh] select-none"
+        className="relative bg-[#0d0d0d] text-white h-[300vh] lg:h-[360vh] select-none"
       >
-        {/* Sticky Full-Viewport Container (Desktop) / Natural Auto-Cycling Stage (Mobile) */}
-        <div className="lg:sticky lg:top-0 lg:h-screen w-full overflow-hidden flex flex-col justify-center">
+        {/* Sticky Full-Viewport Container (all screen sizes) */}
+        <div className="sticky top-0 h-[100svh] lg:h-screen w-full overflow-hidden flex flex-col justify-center py-4 lg:py-0">
           {/* Confetti Canvas Overlay (Fires when reaching Step 04: Cash Out) */}
           <canvas
             id="cashout-confetti-canvas"
@@ -1174,8 +1139,8 @@ export default function LandingPage() {
             {/* ===============================================================
                 RIGHT COLUMN: iPhone Frame with 4 Real PeleBet App Screens (From Figma)
             =============================================================== */}
-            <div className="lg:col-span-6 flex justify-center lg:justify-end mt-4 lg:mt-0">
-              <div className="w-[275px] h-[540px] sm:w-[300px] sm:h-[590px] lg:w-[320px] lg:h-[650px] rounded-[38px] sm:rounded-[42px] lg:rounded-[46px] bg-[#1b1b22] p-[8px] lg:p-[9px] shadow-[0_32px_90px_rgba(0,0,0,0.65)] ring-1 ring-white/20 relative">
+            <div className="lg:col-span-6 flex justify-center lg:justify-end mt-1 lg:mt-0">
+              <div className="h-[min(560px,calc(100svh-230px))] aspect-[275/540] sm:h-[min(590px,calc(100svh-260px))] lg:h-[650px] lg:w-[320px] lg:aspect-auto rounded-[34px] sm:rounded-[42px] lg:rounded-[46px] bg-[#1b1b22] p-[7px] lg:p-[9px] shadow-[0_32px_90px_rgba(0,0,0,0.65)] ring-1 ring-white/20 relative">
                 <div className="w-full h-full rounded-[38px] bg-[#f3f3f7] text-[#0e1660] relative overflow-hidden font-mona">
                   {/* Dynamic Island + Status Bar (shared) */}
                   <div className="absolute top-0 inset-x-0 z-40 h-10 flex items-center justify-between px-6 text-[11px] font-semibold text-[#0d0d0d] pointer-events-none">
