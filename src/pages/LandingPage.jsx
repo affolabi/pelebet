@@ -1079,12 +1079,12 @@ export default function LandingPage() {
                 <br className="hidden sm:block" /> to instant cashout.
               </h2>
 
-              {/* Vertical Progress Rail + 4 Scroll-Driven Steps (Mobile & Desktop) */}
-              <div className="relative pl-4 sm:pl-5 lg:pl-6">
-                {/* Continuous Scroll Progress Rail */}
+              {/* Vertical Progress Rail (Desktop) + 4 Interactive Step Cards (2x2 on Mobile) */}
+              <div className="relative lg:pl-6">
+                {/* Background Rail */}
                 <div
                   aria-hidden="true"
-                  className="block absolute left-0 top-1.5 bottom-1.5 w-[3px] rounded-full bg-white/10 overflow-hidden"
+                  className="hidden lg:block absolute left-0 top-2 bottom-2 w-[3px] rounded-full bg-white/10 overflow-hidden"
                 >
                   <div
                     id="how-progress-bar"
@@ -1093,21 +1093,21 @@ export default function LandingPage() {
                   ></div>
                 </div>
 
-                <div className="flex flex-col items-start gap-1.5 sm:gap-2 lg:gap-3.5">
+                <div className="grid grid-cols-2 gap-2 sm:gap-2.5 lg:flex lg:flex-col lg:items-start lg:gap-3.5">
                   {/* Step 01: Fund Your Wallet */}
                   <button
                     type="button"
                     data-step="0"
-                    className="how-step-card is-active text-left rounded-full py-1 pl-1 pr-3.5 sm:py-1.5 sm:pl-1.5 sm:pr-5 lg:py-2.5 lg:pl-2.5 lg:pr-7 flex items-center gap-2 sm:gap-2.5 lg:gap-3.5 cursor-pointer min-w-0"
+                    className="how-step-card is-active text-left rounded-full py-1.5 pl-1.5 pr-3 lg:py-2.5 lg:pl-2.5 lg:pr-7 flex items-center gap-2 lg:gap-3.5 cursor-pointer min-w-0"
                   >
-                    <span className="step-num-badge w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 text-white/85 flex items-center justify-center shrink-0">
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <span className="step-num-badge w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 text-white/85 flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M19 7V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2v-2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M16 11h5v4h-5a2 2 0 010-4z" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
                     <span className="font-mona font-semibold text-[12px] sm:text-[14px] lg:text-[18px] text-white truncate">
-                      01 · Fund Your Wallet
+                      Fund Your Wallet
                     </span>
                   </button>
 
@@ -1115,10 +1115,10 @@ export default function LandingPage() {
                   <button
                     type="button"
                     data-step="1"
-                    className="how-step-card text-left rounded-full py-1 pl-1 pr-3.5 sm:py-1.5 sm:pl-1.5 sm:pr-5 lg:py-2.5 lg:pl-2.5 lg:pr-7 flex items-center gap-2 sm:gap-2.5 lg:gap-3.5 cursor-pointer min-w-0"
+                    className="how-step-card text-left rounded-full py-1.5 pl-1.5 pr-3 lg:py-2.5 lg:pl-2.5 lg:pr-7 flex items-center gap-2 lg:gap-3.5 cursor-pointer min-w-0"
                   >
-                    <span className="step-num-badge w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 text-white/85 flex items-center justify-center shrink-0">
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <span className="step-num-badge w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 text-white/85 flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <rect x="3" y="3" width="7" height="7" rx="1.5" />
                         <rect x="14" y="3" width="7" height="7" rx="1.5" />
                         <rect x="3" y="14" width="7" height="7" rx="1.5" />
@@ -1126,7 +1126,7 @@ export default function LandingPage() {
                       </svg>
                     </span>
                     <span className="font-mona font-semibold text-[12px] sm:text-[14px] lg:text-[18px] text-white truncate">
-                      02 · Pick Your Game
+                      Pick Your Game
                     </span>
                   </button>
 
@@ -1134,10 +1134,10 @@ export default function LandingPage() {
                   <button
                     type="button"
                     data-step="2"
-                    className="how-step-card text-left rounded-full py-1 pl-1 pr-3.5 sm:py-1.5 sm:pl-1.5 sm:pr-5 lg:py-2.5 lg:pl-2.5 lg:pr-7 flex items-center gap-2 sm:gap-2.5 lg:gap-3.5 cursor-pointer min-w-0"
+                    className="how-step-card text-left rounded-full py-1.5 pl-1.5 pr-3 lg:py-2.5 lg:pl-2.5 lg:pr-7 flex items-center gap-2 lg:gap-3.5 cursor-pointer min-w-0"
                   >
-                    <span className="step-num-badge w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 text-white/85 flex items-center justify-center shrink-0">
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <span className="step-num-badge w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 text-white/85 flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" strokeLinecap="round" strokeLinejoin="round" />
                         <circle cx="9" cy="7" r="4" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M23 21v-2a4 4 0 00-3-3.87" strokeLinecap="round" strokeLinejoin="round" />
@@ -1145,7 +1145,7 @@ export default function LandingPage() {
                       </svg>
                     </span>
                     <span className="font-mona font-semibold text-[12px] sm:text-[14px] lg:text-[18px] text-white truncate">
-                      03 · Create or Join Lobby
+                      Create or Join Lobby
                     </span>
                   </button>
 
@@ -1153,15 +1153,15 @@ export default function LandingPage() {
                   <button
                     type="button"
                     data-step="3"
-                    className="how-step-card text-left rounded-full py-1 pl-1 pr-3.5 sm:py-1.5 sm:pl-1.5 sm:pr-5 lg:py-2.5 lg:pl-2.5 lg:pr-7 flex items-center gap-2 sm:gap-2.5 lg:gap-3.5 cursor-pointer min-w-0"
+                    className="how-step-card text-left rounded-full py-1.5 pl-1.5 pr-3 lg:py-2.5 lg:pl-2.5 lg:pr-7 flex items-center gap-2 lg:gap-3.5 cursor-pointer min-w-0"
                   >
-                    <span className="step-num-badge w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 text-white/85 flex items-center justify-center shrink-0">
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                    <span className="step-num-badge w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 text-white/85 flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
                         <path d="M7 20V4l10 16V4M4 10h16M4 14h16" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
                     <span className="font-mona font-semibold text-[12px] sm:text-[14px] lg:text-[18px] text-white truncate">
-                      04 · Win &amp; Cash Out
+                      Win &amp; Cash Out
                     </span>
                   </button>
                 </div>
@@ -1172,7 +1172,7 @@ export default function LandingPage() {
                 RIGHT COLUMN: iPhone Frame with 4 Real PeleBet App Screens (From Figma)
             =============================================================== */}
             <div className="lg:col-span-6 flex justify-center lg:justify-end mt-1 lg:mt-0">
-              <div className="w-[290px] h-[560px] max-sm:scale-[0.76] max-sm:origin-top max-sm:-mb-[134px] sm:w-[300px] sm:h-[590px] lg:w-[320px] lg:h-[650px] rounded-[42px] lg:rounded-[46px] bg-[#1b1b22] p-[8px] lg:p-[9px] shadow-[0_32px_90px_rgba(0,0,0,0.65)] ring-1 ring-white/20 relative">
+              <div className="w-[290px] h-[560px] max-sm:scale-[0.82] max-sm:origin-top max-sm:-mb-[100px] sm:w-[300px] sm:h-[590px] lg:w-[320px] lg:h-[650px] rounded-[42px] lg:rounded-[46px] bg-[#1b1b22] p-[8px] lg:p-[9px] shadow-[0_32px_90px_rgba(0,0,0,0.65)] ring-1 ring-white/20 relative">
                 <div className="w-full h-full rounded-[38px] bg-[#f3f3f7] text-[#0e1660] relative overflow-hidden font-mona">
                   {/* Dynamic Island + Status Bar (shared) */}
                   <div className="absolute top-0 inset-x-0 z-40 h-10 flex items-center justify-between px-6 text-[11px] font-semibold text-[#0d0d0d] pointer-events-none">
