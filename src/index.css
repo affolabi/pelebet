@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    overflow-x: clip;
+  }
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: #0d0d0d;
     background-color: #ffffff;
-    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
   }
 }
