@@ -353,8 +353,23 @@ export default function LandingPage() {
               </nav>
             </div>
 
-            {/* Right: QR Code "Download the App" Badge + Mobile Menu Button */}
+            {/* Right: Sign Up + Play Now + QR Code "Download the App" Badge + Mobile Menu Button */}
             <div className="flex items-center gap-2 sm:gap-3">
+              <a
+                href="/register"
+                className="hidden lg:inline-flex items-center justify-center bg-[#f4f5f8] hover:bg-[#e9ebf0] border border-gray-200/90 text-[#0d0d0d] font-mona font-semibold text-[13.5px] rounded-full px-5 py-2.5 shadow-sm hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+              >
+                Sign Up
+              </a>
+              <a
+                href="/login"
+                className="hidden sm:inline-flex items-center gap-2 bg-[#2d7ff9] hover:bg-[#1e6fe8] text-white font-mona font-semibold text-[13.5px] rounded-full px-5 py-2.5 shadow-[0_8px_20px_rgba(45,127,249,0.28)] hover:shadow-[0_12px_26px_rgba(45,127,249,0.38)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+              >
+                <svg className="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <span>Play Now</span>
+              </a>
               <a
                 href="#download-ios"
                 className="group inline-flex items-center gap-2 sm:gap-3.5 bg-black/90 hover:bg-black text-white rounded-[14px] sm:rounded-[18px] px-2.5 py-2 sm:px-4 sm:py-2.5 sm:pr-6 shadow-[0_12px_30px_rgba(0,0,0,0.22)] border border-white/15 transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5"
@@ -506,6 +521,23 @@ export default function LandingPage() {
               >
                 Contact
               </a>
+              <div className="mt-2 pt-2.5 border-t border-gray-200/80 grid grid-cols-2 gap-2">
+                <a
+                  href="/register"
+                  className="py-2.5 px-4 rounded-xl bg-[#f4f5f8] hover:bg-[#e9ebf0] border border-gray-200/90 text-[#0d0d0d] font-mona font-semibold text-[14px] text-center transition-colors"
+                >
+                  Sign Up
+                </a>
+                <a
+                  href="/login"
+                  className="py-2.5 px-4 rounded-xl bg-[#2d7ff9] hover:bg-[#1e6fe8] text-white font-mona font-semibold text-[14px] inline-flex items-center justify-center gap-1.5 shadow-[0_6px_16px_rgba(45,127,249,0.28)] transition-colors"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  <span>Play Now</span>
+                </a>
+              </div>
             </nav>
           </div>
 
@@ -583,8 +615,27 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* Apple Store & Google Play Pill Buttons */}
-              <div className="mt-6 lg:mt-8 flex flex-wrap items-center gap-4 anim-open-ctas order-5">
+              {/* Hero CTAs: Play Now, Sign Up, Apple Store & Google Play Pill Buttons */}
+              <div className="mt-6 lg:mt-8 flex flex-wrap items-center gap-3.5 sm:gap-4 anim-open-ctas order-5">
+                {/* Play Now Primary Brand Blue Pill */}
+                <a
+                  href="/login"
+                  className="bg-[#2d7ff9] hover:bg-[#1e6fe8] text-white font-mona font-semibold text-[14.5px] rounded-full px-7 py-3.5 inline-flex items-center gap-2.5 shadow-[0_10px_25px_rgba(45,127,249,0.28)] hover:shadow-[0_16px_32px_rgba(45,127,249,0.38)] hover:-translate-y-1 active:scale-95 transition-all duration-300"
+                >
+                  <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  <span>Play Now</span>
+                </a>
+
+                {/* Sign Up Crisp Outline Pill */}
+                <a
+                  href="/register"
+                  className="bg-white hover:bg-[#f4f5f8] border border-gray-300/90 text-[#111111] font-mona font-semibold text-[14.5px] rounded-full px-7 py-3.5 inline-flex items-center justify-center shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all duration-300"
+                >
+                  Sign Up
+                </a>
+
                 {/* Apple Store Solid Black Pill */}
                 <a
                   href="#download-ios"
