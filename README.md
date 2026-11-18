@@ -5,3 +5,8 @@ Bet Like Never Before — Africa's mobile skill-based P2P gaming arena featuring
 ## Tech Stack
 - React 18 + Vite
 - Tailwind CSS
+
+## Development
+- `npm install`
+- `npm run dev`
+- `npm run build`
